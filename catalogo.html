@@ -1,0 +1,179 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catalogo Primavera - 3Hash</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gudea&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+     <!-- Inicio del encabezado -->
+
+     <div class="cont-anuncio">
+        <h2>ENVIO GRATIS EN COMPRAS SUPERIORES A S/ 200
+            <br> 3 CUOTAS SIN INTERÉS
+        </h2>
+    </div>
+
+    <header>
+
+        <div class="contenedor-principal">
+            <div class="logo">
+                <h1>DEKKER SHOP</h1>
+            </div>
+            <nav>
+
+                <a href="catalogo.html">CATÁLOGO</a>
+                <a href="registro.html">REGISTRO</a>
+                <a  href="#" data-bs-toggle="modal" onclick="actualizarLista()" data-bs-target="#carritoCompra"><i class="bi bi-balloon-heart"></i> CARRITO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner de información -->
+
+    <div class="banner">
+        <div class="banner-text">
+            <p id="text-min">NUEVOS LANZAMIENTOS</p>
+            <p id="text-max">ELIGE TUS PRODUCTOS AL MEJOR PRECIO</p>
+            <div class="botton"><a href="registro.html">REGISTRATE</a></div>
+        </div>
+    </div>
+ 
+        <!-- Modal carrito de compra-->
+        <div class="modal fade" id="carritoCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de compra</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="listaCarrito" class="modal-body">
+                        El carrito está vacio.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Realizar la compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </p>
+
+    <!-- Productos -->
+    <div class="sect-text">
+        <h2>CATÁLOGO</h2>
+        <h3>Temporada Enero </h3>
+    </div>
+
+    <div class="contenedor">
+
+        <div class="contenido-1">
+            <img src="img/Keyboard.jpg" alt="">
+            <p class="precioFinal">S/ 572.31 soles </p>
+            <p class="text-product">CYBERPUNK PRO TKL COOL COLORED HOTSWAP<br>MECHANICAL KEYBOARD</p>
+            <p><button type="button" class="btn btn-dark" href="#" onclick="addCart(this)"><i class="bi bi-cart2"> </i>Agregar a carrito</button></p>
+            
+        </div>
+        <div class="contenido-1">
+            <img src="img/divo.jpg" alt="">
+            <p class="precioFinal"> S/ 348 soles </p>
+            <p class="text-product">Divoom Ditoo Plus |Retro Pixel Art Game <br>Bluetooth Speaker</p>
+            <p><button type="button" class="btn btn-dark" href="#" onclick="addCart(this)"><i class="bi bi-cart2"> </i>Agregar a carrito</button></p>
+        </div>
+        <div class="contenido-1">
+            <img src="img/plantilla.jpg" alt="">
+            <p class="precioFinal"> S/ 69.14 soles </p>
+
+            <p class="text-product">U Core Cool Gamer Technology Check <br>in Game World</p>
+            <p><button type="button" class="btn btn-dark" href="#" onclick="addCart(this)"><i class="bi bi-cart2"> </i>Agregar a carrito</button></p>
+        </div>
+        <div class="contenido-1">
+            <img src="img/Ecom-12.jpg" alt="">
+            <p class="precioFinal">S/ 211.25 soles </p>
+            <p class="text-product">ANOTHER DUCKIEVERSE <br>(DOM)</p>
+            <p><button type="button" class="btn btn-dark" href="#" onclick="addCart(this)"><i class="bi bi-cart2"> </i>Agregar a carrito</button></p>
+        </div>
+        <div class="contenido-1">
+            <img src="img/keys.jpg" alt="">
+            <p class="precioFinal">S/ 575.77 soles </p>
+            <p class="text-product">Bob keycaps box <br>10-A </p>
+            <p><button type="button" class="btn btn-dark" href="#" onclick="addCart(this)"><i class="bi bi-cart2"> </i>Agregar a carrito</button></p>
+        </div>
+        <div class="contenido-1">
+            <img src="img/tec-pink.png" alt="">
+            <p class="precioFinal">S/ 200.46 soles </p>
+
+            <p class="text-product">Macaron Wireless Keyboard <br>and mouse set </p>
+            <p><button type="button" class="btn btn-dark" href="#" onclick="addCart(this)"><i class="bi bi-cart2"> </i>Agregar a carrito</button></p>
+        </div>
+    </div>
+    <!-- Inicio del footer -->
+    <footer>
+        <div class="footer">
+
+            <p>© Copyright 2023 Dekker Store - Todos los derechos reservados.<br>
+                <br> Design: AkkerDev
+            </p>
+        </div>
+    </footer>
+    
+
+
+  
+
+    <script src="js/bootstrap.js"></script>
+
+    <script>
+
+        // Crear una cookie
+        var ObjetosSeleccionados = [];
+
+        // Función para el modal de promoción
+        function primeraFuncion() {
+            const modalEntrada = new bootstrap.Modal("#modalEntrada");
+            modalEntrada.show();
+        }
+
+        // Función para los botones añadir carrito
+        function addCart(objeto){
+            // Obtener el elemento donde se encuetra
+            var contenedor = objeto.parentElement.parentElement;
+            // Datos del producto
+            var nombre = contenedor.getElementsByTagName("p")[0];
+            var precioFinal = contenedor.getElementsByTagName("p")[1];
+            // Crear objeto
+            var producto = {
+                "nombre" : nombre.innerText,
+                // "precio" : precio.innerText,
+                "precioFinal" : precioFinal.innerText
+            }
+            // Añadir al array de objetos
+            ObjetosSeleccionados.push(producto);
+        }
+
+        // Función actualizar lista
+        function actualizarLista(){
+            var lista = document.getElementById("listaCarrito");
+            // Crear el HTML
+            var texto = "";
+            ObjetosSeleccionados.forEach(element => {
+                texto = texto + "<div class='productoLista'>";
+                texto = texto + "<p>"+element.nombre+"</p>";
+                texto = texto + "<p>"+element.precioFinal+"</p>";
+                texto = texto + "</div>";
+            });
+            lista.innerHTML = texto;
+        }
+    </script>
+   
+</body>
